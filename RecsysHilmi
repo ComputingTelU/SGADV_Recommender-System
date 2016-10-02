@@ -1,0 +1,1488 @@
+import math
+
+def tetangganya(e):
+	if e == "a":
+		i = 0
+		j = 0
+		h = 1
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 1
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==1):
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+		if (b == 1):
+			bnya = "b"
+		else:
+			bnya = ""
+
+		if (c ==1):
+			scnya = "c"
+		else:
+			cnya = ""
+
+		if (d == 1):
+			dnya = "d"
+		else:
+			dnya = ""
+
+		if (e == 1):
+			enya = "e"
+		else:
+			enya = ""
+
+		if (f ==1):
+			fnya = "f"
+		else:
+			fnya = ""
+
+		print "tetangga dari A = "+bnya+cnya+dnya+enya+fnya
+			
+
+	elif e == "b":
+		i = 1
+		j = 0
+		a = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+				
+			j = j+1	
+		if (a == 1):
+			anya = "a"
+		else:
+			anya = ""
+
+		if (c ==1):
+			cnya = "c"
+		else:
+			cnya = ""
+
+		if (d == 1):
+			dnya = "d"
+		else:
+			dnya = ""
+
+		if (e == 1):
+			enya = "e"
+		else:
+			enya = ""
+
+		if (f ==1):
+			fnya = "f"
+		else:
+			fnya = ""
+
+		print "tetangga dari B = "+anya+cnya+dnya+enya+fnya
+
+	elif e == "c":
+		i = 2
+		j = 0
+		a = 0
+		b = 0
+		d = 0
+		e = 0
+		f = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+				
+			j = j+1	
+		if (a == 1):
+			anya = "a"
+		else:
+			anya = ""
+
+		if (b ==1):
+			bnya = "b"
+		else:
+			bnya = ""
+
+		if (d == 1):
+			dnya = "d"
+		else:
+			dnya = ""
+
+		if (e == 1):
+			enya = "e"
+		else:
+			enya = ""
+
+		if (f ==1):
+			fnya = "f"
+		else:
+			fnya = ""
+
+		print "tetangga dari C = "+anya+bnya+dnya+enya+fnya
+			
+
+	elif e == "d":
+		i = 3
+		j = 0
+		a = 0
+		b = 0
+		c = 0
+		e = 0
+		f = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+				
+			j = j+1	
+		if (a == 1):
+			anya = "a"
+		else:
+			anya = ""
+
+		if (b ==1):
+			bnya = "b"
+		else:
+			bnya = ""
+
+		if (c == 1):
+			cnya = "d"
+		else:
+			cnya = ""
+
+		if (e == 1):
+			enya = "e"
+		else:
+			enya = ""
+
+		if (f ==1):
+			fnya = "f"
+		else:
+			fnya = ""
+
+		print "tetangga dari D = "+anya+bnya+cnya+enya+fnya
+
+
+	elif e == "e":
+		i = 4
+		j = 0
+		a = 0
+		b = 0
+		c = 0
+		d = 0
+		f = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+				
+			j = j+1	
+		if (a == 1):
+			anya = "a"
+		else:
+			anya = ""
+
+		if (b ==1):
+			bnya = "b"
+		else:
+			bnya = ""
+
+		if (c == 1):
+			cnya = "c"
+		else:
+			cnya = ""
+
+		if (d == 1):
+			dnya = "d"
+		else:
+			dnya = ""
+
+		if (f ==1):
+			fnya = "f"
+		else:
+			fnya = ""
+
+		print "tetangga dari E = "+anya+bnya+cnya+dnya+fnya
+
+	elif e == "f":
+		i = 5
+		j = 0
+		a = 0
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					h = h+1;
+				
+			j = j+1	
+		if (a == 1):
+			anya = "a"
+		else:
+			anya = ""
+
+		if (b ==1):
+			bnya = "b"
+		else:
+			bnya = ""
+
+		if (c == 1):
+			cnya = "c"
+		else:
+			cnya = ""
+
+		if (d == 1):
+			dnya = "d"
+		else:
+			dnya = ""
+
+		if (e ==1):
+			enya = "e"
+		else:
+			enya = ""
+
+		print "tetangga dari F = "+anya+bnya+cnya+dnya+enya
+
+	else:
+		print "Indeks nya gada bro"
+
+
+def anggotanya(e):
+	if e == "a":
+		i = 0
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	elif e == "b":
+		i = 1
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	elif e == "c":
+		i = 2
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	elif e == "d":
+		i = 3
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	elif e == "e":
+		i = 4
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	elif e == "f":
+		i = 5
+		j = 0
+		while j<6:
+			print matriks[i][j]
+			j = j+1
+	else:
+		print "Indeks nya gada bro"
+
+def pembagi(e):
+	if e == "a":
+		i = 0
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	elif e == "b":
+		i = 1
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	elif e == "c":
+		i = 2
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	elif e == "d":
+		i = 3
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	elif e == "e":
+		i = 4
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	elif e == "f":
+		i = 5
+		j = 0
+		a = 0.0
+		b = 0.0
+		while j<6:
+			if matriks[i][j] != 0:
+				a = a + matriks[i][j]
+				b = b + 1
+			j = j+1
+		x = a/b
+		return x
+	else:
+		print "Indeks nya gada bro"
+
+def similarity1(ahay,bhay):
+	if ahay == "e":
+		i = 4
+		j = 0
+		h = 0
+		b = 0
+		c = 0
+		d = 0
+		a = 0
+		f = 0
+		x = pembagi("e")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==1):
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==0): 
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (a == 1) and (bhay == "a"):
+			y = pembagi("b")
+			i = 4
+			j = 0
+			h = 0
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (b == 1) and (bhay == "b"):
+			y = pembagi("a")
+			i = 4
+			j = 0
+			h = 1
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (c == 1) and (bhay == "c"):
+			y = pembagi("c")
+			i = 4
+			j = 0
+			h = 2
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (d == 1) and (bhay == "d"):
+			y = pembagi("d")
+			i = 4
+			j = 0
+			h = 3
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (f == 1) and (bhay == "f"):
+			y = pembagi("f")
+			i = 4
+			j = 0
+			h = 5
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+
+	elif ahay == "a":
+		i = 0
+		j = 0
+		h = 1
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		x = pembagi("a")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 1
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==1):
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (b == 1) and (bhay == "b"):
+			y = pembagi("b")
+			i = 0
+			j = 0
+			h = 1
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (c == 1) and (bhay == "c"):
+			y = pembagi("c")
+			i = 0
+			j = 0
+			h = 2
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (d == 1) and (bhay == "d"):
+			y = pembagi("d")
+			i = 0
+			j = 0
+			h = 3
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (e == 1) and (bhay == "e"):
+			y = pembagi("e")
+			i = 0
+			j = 0
+			h = 4
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (f == 1) and (bhay == "f"):
+			y = pembagi("f")
+			i = 0
+			j = 0
+			h = 5
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+
+	elif ahay == "b":
+		i = 1
+		j = 0
+		h = 0
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		x = pembagi("b")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (a == 1) and (bhay == "a"):
+			y = pembagi("a")
+			i = 1
+			j = 0
+			h = 0
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (c == 1) and (bhay == "c"):
+			y = pembagi("c")
+			i = 1
+			j = 0
+			h = 2
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (d == 1) and (bhay == "d"):
+			y = pembagi("d")
+			i = 1
+			j = 0
+			h = 3
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (e == 1) and (bhay == "e"):
+			y = pembagi("e")
+			i = 1
+			j = 0
+			h = 4
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (f == 1) and (bhay == "f"):
+			y = pembagi("f")
+			i = 1
+			j = 0
+			h = 5
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+
+	elif ahay == "c":
+		i = 2
+		j = 0
+		h = 0
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		x = pembagi("c")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (a == 1) and (bhay == "a"):
+			y = pembagi("a")
+			i = 2
+			j = 0
+			h = 0
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (b == 1) and (bhay == "b"):
+			y = pembagi("b")
+			i = 2
+			j = 0
+			h = 1
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (d == 1) and (bhay == "d"):
+			y = pembagi("d")
+			i = 2
+			j = 0
+			h = 3
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (e == 1) and (bhay == "e"):
+			y = pembagi("e")
+			i = 2
+			j = 0
+			h = 4
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			print hasil
+
+		elif (f == 1) and (bhay == "f"):
+			y = pembagi("f")
+			i = 2
+			j = 0
+			h = 5
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+
+	elif ahay == "d":
+		i = 3
+		j = 0
+		h = 0
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		x = pembagi("d")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==5): 
+						f = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (a == 1) and (bhay == "a"):
+			y = pembagi("a")
+			i = 3
+			j = 0
+			h = 0
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (b == 1) and (bhay == "b"):
+			y = pembagi("b")
+			i = 3
+			j = 0
+			h = 1
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (c == 1) and (bhay == "c"):
+			y = pembagi("c")
+			i = 3
+			j = 0
+			h = 2
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (e == 1) and (bhay == "e"):
+			y = pembagi("e")
+			i = 3
+			j = 0
+			h = 4
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (f == 1) and (bhay == "f"):
+			y = pembagi("f")
+			i = 3
+			j = 0
+			h = 5
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+	elif ahay == "f":
+		i = 5
+		j = 0
+		h = 0
+		b = 0
+		c = 0
+		d = 0
+		e = 0
+		f = 0
+		x = pembagi("d")
+		while(j<6):
+			if matriks[i][j] != 0:
+				h = 0
+				while(h<6):
+					if (matriks[h][j] !=0) and (h ==0):
+						a = 1;
+					elif (matriks[h][j] !=0) and (h ==1): 
+						b = 1;
+					elif (matriks[h][j] !=0) and (h ==2): 
+						c = 1;
+					elif (matriks[h][j] !=0) and (h ==4): 
+						e = 1;
+					elif (matriks[h][j] !=0) and (h ==3): 
+						d = 1;
+					h = h+1;
+			j = j+1	
+
+
+		if (a == 1) and (bhay == "a"):
+			y = pembagi("a")
+			i = 5
+			j = 0
+			h = 0
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil	
+
+		elif (b == 1) and (bhay == "b"):
+			y = pembagi("b")
+			i = 5
+			j = 0
+			h = 1
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (c == 1) and (bhay == "c"):
+			y = pembagi("c")
+			i = 5
+			j = 0
+			h = 2
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (e == 1) and (bhay == "e"):
+			y = pembagi("e")
+			i = 5
+			j = 0
+			h = 4
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+		elif (d == 1) and (bhay == "d"):
+			y = pembagi("d")
+			i = 5
+			j = 0
+			h = 3
+			nilai1 = 0
+			nilai2 = 0
+			nilai3 = 0
+			nilai4 = 0
+			while(j<6):
+				if (matriks[i][j] != 0) and (matriks[h][j] != 0):
+					if (nilai1 == 0) or (nilai2 == 0):
+						nilai1 = matriks[i][j]
+						nilai2 = matriks[h][j]
+					else:
+						nilai3 = matriks[i][j]
+						nilai4 = matriks[h][j]
+				j = j+1		
+			if (nilai3 != 0):
+				hasilatas = ((nilai1 - x)*(nilai2-y))+((nilai3 - x)*(nilai4-y))
+				hasilbawah = math.sqrt(((nilai1-x)**2+(nilai3-x)**2)*((nilai2-y)**2+(nilai4-y)**2))
+				hasil = hasilatas/hasilbawah
+			elif (nilai3 == 0):
+				hasilatas = (nilai1-x)*(nilai2-y)
+				hasilbawah = math.sqrt((nilai1-x)**2*(nilai2-y)**2)
+				hasil = hasilatas/hasilbawah
+			return hasil
+
+
+def sigma(a):
+	q = similarity1(a,"a")
+	w = similarity1(a,"b")
+	e= similarity1(a,"c")
+	r = similarity1(a,"d")
+	t = similarity1(a,"e")
+	y = similarity1(a,"f")
+
+	if (q == none):
+		print "bbb"
+	else:
+		print "ada yg salah"
+
+
+
+matriks = [[0 for col in range(6)]for row in range(6)]
+
+matriks[0][0] = 2
+matriks[0][3] = 4
+matriks[0][4] = 5
+matriks[1][0] = 5
+matriks[1][2] = 4
+matriks[1][5] = 1
+matriks[2][2] = 5
+matriks[2][4] = 2
+matriks[3][1] = 1
+matriks[3][3] = 5
+matriks[3][5] = 4
+matriks[4][2] = 4
+matriks[4][5] = 2
+matriks[5][0] = 4
+matriks[5][1] = 5
+matriks[5][3] = 1
+
+sigma("a")
+
