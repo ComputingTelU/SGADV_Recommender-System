@@ -1,3 +1,5 @@
+# rizkiyanapp
+
 import math
 
 # KAMUS DATA
